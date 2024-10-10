@@ -14,90 +14,66 @@
     <link rel="canonical" href="index.html">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="img/logo.jpg" alt="Adarsha Pharmacy Logo" class="logo">
+        <div class="main-header">
+            <div class="container">
+                <div class="logo-container">
+                    <img src="img/logo.jpg" alt="Adarsha Pharmacy Logo" class="logo">
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search medicines...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <nav>
                     <ul class="nav-menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#medicines">Medicines</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#services"><i class="fas fa-hand-holding-medical"></i> Services</a></li>
+                        <li><a href="#medicines"><i class="fas fa-pills"></i> Medicines</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
                     </ul>
-                    <button class="hamburger" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
                 </nav>
             </div>
         </div>
     </header>
-
-    <main>
+    <div class="floating-buttons">
+        <div class="icon-button cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="icon-label">Cart</span>
+        </div>
+    </div>
+    <main id="main-content">
         <section id="home">
-            <div class="container">
-                <div class="home-content">
-                    <div class="home-text">
-                        <h1>Adarsha Pharmacy</h1>
-                        <p class="tagline">Trusted Care, Quality Medicine, Affordable for All</p>
-                        <p class="description">Welcome to Adarsha Pharmacy, your trusted healthcare partner for 25
-                            years. We offer quality medicines and personalized care to our community.</p>
-                        <div class="cta-buttons">
-                            <a href="#services" class="btn btn-primary">View Services</a>
-                            <a href="#contact" class="btn btn-secondary">Contact Us</a>
-                            <a href="#medicines" class="btn btn-tertiary">Explore Our Medicines</a>
-                        </div>
-                    </div>
-                    <div class="home-image">
-                        <img src="img/storefront.jpg" alt="Adarsha Pharmacy Storefront">
-                    </div>
+            <div class="home-background"></div>
+            <div class="home-content">
+                <div class="home-text">
+                    <h1>Adarsha Pharmacy</h1>
+                    <p class="tagline">Trusted Care, Quality Medicine, Affordable for All</p>
+                    <p class="description">Welcome to Adarsha Pharmacy, your trusted healthcare partner for 25 years. We
+                        offer quality medicines and personalized care to our community.</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Established 25 years ago, Adarsha Pharmacy has been a pillar of healthcare in the Kalshi
-                            community. Founded by Md. Liaquate Hossain, we continue his legacy of providing trusted
-                            treatments and exceptional service.</p>
-                        <p>Our mission is to ensure access to high-quality, affordable medicines and healthcare services
-                            for all members of our community.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="img/pharmacy-interior.jpg" alt="Adarsha Pharmacy Interior">
-                    </div>
-                </div>
-                <h3>Meet Our Team</h3>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="img/founder.jpg" alt="Md. Liaquate Hossain">
-                        <h4>Md. Liaquate Hossain</h4>
-                        <p class="role">Founder</p>
-                        <p>A respected leader in the medicine trade, recognized with the Best Seller Award.</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="img/analyst.jpg" alt="Asif Abdullah Uday">
-                        <h4>Asif Abdullah Uday</h4>
-                        <p class="role">Business Analyst</p>
-                        <p>Bringing modern business practices to enhance our service delivery.</p>
-                    </div>
+                <div class="cta-buttons">
+                    <a href="#services" class="btn btn-primary">View Services</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                    <a href="#medicines" class="btn btn-tertiary">Explore Our Medicines</a>
                 </div>
             </div>
         </section>
 
         <section id="services">
             <div class="container">
-                <h2>Our Services</h2>
+                <h2><i class="fas fa-hand-holding-medical"></i> Our Services</h2>
                 <div class="services-grid">
                     <div class="service-card">
                         <i class="fas fa-stethoscope"></i>
@@ -123,72 +99,128 @@
 
         <section id="medicines">
             <div class="container">
-                <h2>Our Medicines</h2>
-                <div class="medicines-grid">
-                    <div class="medicine-category">
-                        <i class="fas fa-heart"></i>
-                        <h3>Cardiovascular</h3>
-                    </div>
-                    <div class="medicine-category">
-                        <i class="fas fa-bacterium"></i>
-                        <h3>Antibiotics</h3>
-                    </div>
-                    <div class="medicine-category">
-                        <i class="fas fa-tint"></i>
-                        <h3>Diabetes</h3>
-                    </div>
-                    <div class="medicine-category">
-                        <i class="fas fa-virus"></i>
-                        <h3>Antivirals</h3>
-                    </div>
-                    <div class="medicine-category">
-                        <i class="fas fa-allergies"></i>
-                        <h3>Antifungals</h3>
-                    </div>
-                    <div class="medicine-category">
-                        <i class="fas fa-bug"></i>
-                        <h3>Antiparasitics</h3>
-                    </div>
-                    <!-- Add more categories as needed -->
+                <h2><i class="fas fa-pills"></i> Our Medicines</h2>
+                <div class="category-filter">
+                    <select id="medicine-category">
+                        <option value="all">All Categories</option>
+                        <option value="cardiovascular">Cardiovascular</option>
+                        <option value="antibiotics">Antibiotics</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="antivirals">Antivirals</option>
+                        <option value="antifungals">Antifungals</option>
+                        <option value="antiparasitics">Antiparasitics</option>
+                    </select>
                 </div>
-                <p class="medicine-note">We source our medicines from trusted suppliers to ensure the highest quality
-                    for our customers.</p>
-                <div class="special-offer">
-                    <h3>Special Offer</h3>
-                    <img src="img/special-offer.jpg" alt="Special Offer">
-                    <p>Get 10% off on all medicines this month!</p>
-                    <div class="offer-buttons">
-                        <a href="#" class="btn btn-primary">View Offers</a>
-                        <a href="#" class="btn btn-secondary">Buy Now</a>
+                <div class="medicines-grid">
+                    <!-- Example of a medicine item -->
+                    <div class="medicine-item" data-category="cardiovascular">
+                        <img src="img/medicine.jpg" alt="Lisinopril">
+                        <h3>Lisinopril</h3>
+                        <p>ACE inhibitor for high blood pressure</p>
+                        <p class="price">$10.99</p>
+                        <div class="quantity-control">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Lisinopril" data-price="10.99">Add to
+                            Cart</button>
+                        <div class="medicine-note">
+                            <p>Note: This medicine is not suitable for everyone. Consult a doctor before use.</p>
+                        </div>
+                    </div>
+                    <div class="medicine-item" data-category="cardiovascular">
+                        <img src="img/medicine.jpg" alt="Lisinopril">
+                        <h3>Lisinopril</h3>
+                        <p>ACE inhibitor for high blood pressure</p>
+                        <p class="price">$10.99</p>
+                        <div class="quantity-control">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Lisinopril" data-price="10.99">Add to
+                            Cart</button>
+                        <div class="medicine-note">
+                            <p>Note: This medicine is not suitable for everyone. Consult a doctor before use.</p>
+                        </div>
+                    </div>
+                    <div class="medicine-item" data-category="antibiotics">
+                        <img src="img/medicine.jpg" alt="Lisinopril">
+                        <h3>Lisinopril</h3>
+                        <p>ACE inhibitor for high blood pressure</p>
+                        <p class="price">$10.99</p>
+                        <div class="quantity-control">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Lisinopril" data-price="10.99">Add to
+                            Cart</button>
+                        <div class="medicine-note">
+                            <p>Note: This medicine is not suitable for everyone. Consult a doctor before use.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials">
+        <section id="about">
             <div class="container">
-                <h2>What Our Customers Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial">
-                        <img src="img/customer1.jpg" alt="Customer 1" class="testimonial-image">
-                        <p class="testimonial-text">"Adarsha Pharmacy has been a lifesaver for me. The medicines are
-                            affordable and the staff is always helpful."</p>
-                        <p class="testimonial-author">- Rahima Begum, Local Resident</p>
+                <h2><i class="fas fa-info-circle"></i> About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Established 25 years ago, Adarsha Pharmacy has been a pillar of healthcare in the Kalshi
+                            community. Founded by Md. Liaquate Hossain, we continue his legacy of providing trusted
+                            treatments and exceptional service.</p>
+                        <p>Our mission is to ensure access to high-quality, affordable medicines and healthcare services
+                            for all members of our community.</p>
                     </div>
-                    <div class="testimonial">
-                        <img src="img/customer2.jpg" alt="Customer 2" class="testimonial-image">
-                        <p class="testimonial-text">"I've been using Adarsha Pharmacy for years. The quality of the
-                            medicines is top-notch and the prices are unbeatable."</p>
-                        <p class="testimonial-author">- Abdul Karim, Regular Customer</p>
-                    </div>
-                    <!-- Add more testimonials as needed -->
                 </div>
+                <section class="team-section">
+                    <div class="container">
+                        <h2>Meet Our Team</h2>
+                        <div class="team-members">
+                            <div class="team-member">
+                                <div class="team-member-image">
+                                    <img src="img/p1.jpg" alt="Md. Liaquate Hossain">
+                                </div>
+                                <div class="team-member-info">
+                                    <h3>Md. Liaquate Hossain</h3>
+                                    <p>Founder</p>
+                                    <p>A respected leader in the medicine trade, recognized with the Best Seller Award.
+                                    </p>
+                                    <div class="team-member-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <div class="team-member-image">
+                                    <img src="img/p2.jpg" alt="Jane Smith">
+                                </div>
+                                <div class="team-member-info">
+                                    <h3>Asif Abdullah Uday</h3>
+                                    <p>Business Analyst</p>
+                                    <p>Bringing modern business practices to enhance our service delivery.</p>
+                                    <div class="team-member-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
 
         <section id="contact">
             <div class="container">
-                <h2>Contact Us</h2>
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Get in Touch</h3>
@@ -213,26 +245,30 @@
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.196233833038!2d90.3650196750823!3d23.78887398456838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70b7da49173%3A0x4aa53b12b689b60!2sAdarsha%20Pharmacy!5e0!3m2!1sen!2sbd!4v1716623366086!5m2!1sen!2sbd"
                                 width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-fallback" style="display:none;">
+                                <p>Map loading blocked. Please disable your ad blocker to view the map.</p>
+                                <p>Our location: Kalshi, Mirpur-12, Dhaka</p>
+                            </div>
                         </div>
                     </div>
                     <div class="contact-form">
                         <h3>Send us a message</h3>
                         <form>
                             <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" placeholder=" " required>
+                                <label for="name">Name</label>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <label for="email">Email</label>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Phone:</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" placeholder=" ">
+                                <label for="phone">Phone</label>
                             </div>
                             <div class="form-group">
-                                <label for="message">Message:</label>
-                                <textarea id="message" name="message" required></textarea>
+                                <textarea id="message" name="message" placeholder=" " required></textarea>
+                                <label for="message">Message</label>
                             </div>
                             <button type="submit" class="btn btn-primary">Send Message</button>
                         </form>
@@ -243,7 +279,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Adarsha Pharmacy. All rights reserved.</p>
+        <p>&copy; 2024 Adarsha Pharmacy. All rights reserved by Masum Billah Zihadi.</p>
     </footer>
     <script src="app.js"></script>
 </body>
