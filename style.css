@@ -161,13 +161,9 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    /* Adjust the padding values as needed */
     border: 2px solid white;
-    /* Ensure border is not causing the issue */
     border-radius: 30px;
-    /* Maintain rounded shape */
     gap: 10px;
-    /* Space between icon and text */
     background-color: transparent;
     color: #ffffff;
     text-decoration: none;
@@ -184,32 +180,12 @@ nav {
 
 .login-button-icon {
     margin-right: 8px;
-    /* Space between icon and text */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .login-button {
-        margin-left: 0;
-        margin-top: 10px;
-        padding: 6px 16px;
-    }
-}
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .main-header .container {
         flex-wrap: wrap;
-    }
-
-    .logo-container {
-        order: 1;
-    }
-
-    .search-box {
-        order: 2;
-        flex: 1;
-        margin: 10px 0;
     }
 
     .hamburger {
@@ -236,9 +212,31 @@ nav {
         margin: 10px 0;
     }
 
+    .logo-container {
+        order: 1;
+    }
+
+    .search-box {
+        order: 2;
+        flex: 1;
+        margin: 10px 0;
+        max-width: calc(100% - 100px);
+    }
+
+    .search-box input {
+        padding: 6px 30px 6px 12px;
+        font-size: 13px;
+    }
+
+    .search-box button {
+        font-size: 14px;
+        right: 8px;
+    }
+
     .login-button {
         margin-left: 0;
         margin-top: 10px;
+        padding: 6px 16px;
     }
 }
 
@@ -322,25 +320,6 @@ nav {
     color: #ffffff;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .search-box {
-        flex: 1;
-        margin: 10px 0;
-        max-width: calc(100% - 100px);
-    }
-
-    .search-box input {
-        padding: 6px 30px 6px 12px;
-        font-size: 13px;
-    }
-
-    .search-box button {
-        font-size: 14px;
-        right: 8px;
-    }
-}
-
 /* Floating Buttons Styles */
 .floating-buttons {
     position: fixed;
@@ -401,34 +380,25 @@ section {
 #services,
 #medicines,
 #about,
-#contact {
-    /* Remove opacity: 0; */
-    /* transform: translateY(20px); */
-    /* transition: opacity 0.5s ease, transform 0.5s ease; */
-}
+#contact {}
 
 #services.animate,
 #medicines.animate,
 #about.animate,
-#contact.animate {
-    /* opacity: 1; */
-    /* transform: translateY(0); */
-}
+#contact.animate {}
 
-/* Ensure proper spacing for the first section after home */
 #services {
     margin-top: 60px;
-    /* Adjust this value based on your header height */
+
 }
 
-/* Adjust the home section to not cover other sections */
+
 #home {
     height: 100vh;
     min-height: 600px;
     z-index: 0;
 }
 
-/* Add this to ensure sections are visible */
 main {
     position: relative;
     z-index: 1;
@@ -660,9 +630,8 @@ h3 {
 #services {
     background-color: #f9f9f9;
     padding-top: 60px;
-    /* Reduce top padding */
     margin-top: 0;
-    /* Ensure no margin at the top */
+
 }
 
 .services-grid {
@@ -915,7 +884,7 @@ footer p {
     margin: 0;
 }
 
-/* Remove the curved transition */
+
 #contact::after {
     display: none;
 }
@@ -924,7 +893,6 @@ footer p {
 .social-media {
     margin-top: 20px;
     margin-bottom: 30px;
-    /* Add space below social media icons */
 }
 
 .social-media a {
@@ -937,7 +905,6 @@ footer p {
 
 .social-media a:last-child {
     margin-right: 0;
-    /* Remove right margin from the last icon */
 }
 
 .social-media a:hover {
@@ -955,30 +922,24 @@ footer p {
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        /* Change to a single column for mobile */
     }
 
     .contact-info,
     .contact-form {
         width: 100%;
-        /* Ensure full width on mobile */
     }
 }
 
-/* Additional spacing for mobile view */
 @media (max-width: 768px) {
     .social-media {
         margin-bottom: 40px;
-        /* Increase bottom margin on mobile */
     }
 
     .contact-info {
         margin-bottom: 30px;
-        /* Add space between info and form on mobile */
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .main-header .container {
         display: flex;
@@ -1080,7 +1041,6 @@ footer p {
     position: fixed;
     right: 40px;
     bottom: 40px;
-    /* Changed from top: 50% to bottom: 20px */
     background-color: #005a8c;
     color: #fff;
     width: 50px;
@@ -1115,7 +1075,6 @@ footer p {
     font-weight: bold;
 }
 
-/* Adjust for mobile devices */
 @media (max-width: 768px) {
     .cart-icon {
         right: 10px;
@@ -1366,7 +1325,6 @@ p {
         order: 2;
         flex: 1;
         max-width: calc(100% - 100px);
-        /* Adjust this value as needed */
         margin: 0 10px;
     }
 
@@ -1491,7 +1449,6 @@ p {
         order: 2;
         flex: 1;
         max-width: calc(100% - 100px);
-        /* Adjust this value as needed */
         margin: 0 10px;
     }
 
@@ -1741,43 +1698,34 @@ button:hover {
 @media (max-width: 768px) {
     #home {
         min-height: calc(100vh - 60px);
-        /* Adjust based on your header height */
         padding-top: 120px;
-        /* Increased top padding for mobile */
     }
 
     .home-content {
         padding-top: 80px;
-        /* Increased padding to push content down */
     }
 
     .home-text h1 {
         font-size: 2.3em;
-        /* Further reduced font size for mobile */
         margin-bottom: 15px;
-        /* Add some space below the title */
     }
 
     .home-text .tagline {
         font-size: 1.2em;
         margin-bottom: 15px;
-        /* Add some space below the tagline */
     }
 
     .home-text .description {
         font-size: 1em;
         line-height: 1.4;
-        /* Adjust line height for better readability */
     }
 
     .cta-buttons {
         margin-top: 30px;
-        /* Add more space above the buttons */
     }
 
     .btn {
         padding: 10px 20px;
-        /* Slightly smaller buttons for mobile */
         font-size: 0.9em;
     }
 }
@@ -1791,23 +1739,18 @@ header {
     z-index: 1000;
 }
 
-/* Ensure other sections don't get hidden under the header */
+
 section:not(#home) {
     padding-top: 100px;
-    /* Increased padding for all sections */
 }
 
-/* Additional adjustment for the first section after home */
 #services {
     padding-top: 120px;
-    /* Give extra space to the first section after home */
 }
 
-/* Adjust for very small screens */
 @media (max-width: 480px) {
     #home {
         padding-top: 140px;
-        /* Even more padding for very small screens */
     }
 
     .home-content {
@@ -1835,7 +1778,6 @@ section:not(#home) {
 .team-section {
     padding: 80px 0;
     background-color: rgba(255, 255, 255, 0.1);
-    /* Light, transparent background */
     backdrop-filter: blur(5px);
 }
 
@@ -1859,8 +1801,7 @@ section:not(#home) {
     max-width: 300px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
-    /* Light, transparent background */
-    backdrop-filter: blur(10px);
+    `backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
